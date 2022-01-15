@@ -1,0 +1,4 @@
+.hovereffecs:hover {
+    box-shadow: 1px 1px 5px 2px black !important;
+    transition: 0.5s !important;
+}
