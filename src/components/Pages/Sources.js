@@ -5,6 +5,7 @@ function Sources(props) {
     const [sources, setsources] = useState([]);
     const [loading, setloading] = useState(true);
     const fetchData = async () => {
+        document.title = 'News Sources - Daily News';
         setloading(true);
         let url = `https://saurav.tech/NewsAPI/sources.json`;
         const response = await fetch(url);
@@ -24,7 +25,7 @@ function Sources(props) {
     return (
         <div style={{ marginTop: '80px' }}>
             {loading && <Spinner />}
-            {!loading && <h1 className='mt-3 text-center'>All Sources</h1>}
+            {!loading && <h1 className='mt-3 text-center'>All News Sources</h1>}
             {!loading && (
                 <div className='container mt-3 mb-5'>
                     <div className='row row-cols-1 row-cols-md-3 g-4'>

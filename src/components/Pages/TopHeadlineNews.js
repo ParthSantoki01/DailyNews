@@ -9,6 +9,9 @@ function TopHeadlineNews(props) {
     const [loading, setloading] = useState(true);
     const [totalResults, settotalResults] = useState(0);
     const fetchData = async () => {
+        document.title = `${capitalizeFirstLetter(
+            props.category
+        )} News ${getCountryName(props.country)} - Daily News`;
         setloading(true);
         let url = `https://saurav.tech/NewsAPI/top-headlines/category/${props.category}/${props.country}.json`;
         const response = await fetch(url);
@@ -65,7 +68,7 @@ function TopHeadlineNews(props) {
                 <InfiniteScroll
                     dataLength={articles.length}
                     next={loadMoreData}
-                    hasMore={articles.length !== totalResults}
+                    hasMore={articles.length !== allarticales.length}
                     loader={<Spinner />}
                     endMessage={
                         <p style={{ textAlign: 'center' }}>

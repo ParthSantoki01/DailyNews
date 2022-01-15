@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ind from '../Photos/India.jpg';
 import usa from '../Photos/USA.jpg';
 import fra from '../Photos/France.jpg';
@@ -7,6 +7,10 @@ import rus from '../Photos/Russia.jpg';
 import uk from '../Photos/UK.jpg';
 import { Link } from 'react-router-dom';
 function Country() {
+    useEffect(() => {
+        document.title = 'Country - Daily News';
+    }, []);
+
     return (
         <div className='container'>
             <h2 className='mt-3 text-center'>Country</h2>
