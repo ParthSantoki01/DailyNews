@@ -8,7 +8,7 @@ import uk from '../Photos/UK.jpg';
 import { Link } from 'react-router-dom';
 function Country() {
     useEffect(() => {
-        document.title = 'Country - Daily News';
+        document.title = 'Country - News Padho';
     }, []);
 
     return (

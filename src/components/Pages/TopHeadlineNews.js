@@ -7,18 +7,16 @@ function TopHeadlineNews(props) {
     const [allarticales, setallarticales] = useState([]);
     const [page, setpage] = useState(0);
     const [loading, setloading] = useState(true);
-    const [totalResults, settotalResults] = useState(0);
     const fetchData = async () => {
         document.title = `${capitalizeFirstLetter(
             props.category
-        )} News ${getCountryName(props.country)} - Daily News`;
+        )} News ${getCountryName(props.country)} - News Padho`;
         setloading(true);
         let url = `https://saurav.tech/NewsAPI/top-headlines/category/${props.category}/${props.country}.json`;
         const response = await fetch(url);
         const parsedData = await response.json();
         setallarticales(parsedData.articles);
         setarticles(parsedData.articles.slice(0, 9));
-        settotalResults(parsedData.totalResults);
         setloading(false);
     };
 

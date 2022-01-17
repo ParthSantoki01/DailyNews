@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Country from './components/Pages/Country';
 import Navbar from './components/Card/Navbar';
+import HomePage from './components/Pages/HomePage';
 import TopHeadlineNews from './components/Pages/TopHeadlineNews';
 import NewsSources from './components/Pages/NewsSources';
 import Sources from './components/Pages/Sources';
@@ -13,17 +14,7 @@ function App() {
             <BrowserRouter>
                 <Navbar />
                 <Routes>
-                    <Route
-                        exact
-                        path='/'
-                        element={
-                            <TopHeadlineNews
-                                key='home'
-                                category='general'
-                                country='in'
-                            />
-                        }
-                    />
+                    <Route exact path='/' element={<HomePage />} />
                     <Route
                         exact
                         path='/general'

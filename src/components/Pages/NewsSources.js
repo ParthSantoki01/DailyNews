@@ -8,7 +8,7 @@ function NewsSources(props) {
     const [page, setpage] = useState(0);
     const [loading, setloading] = useState(true);
     const fetchData = async () => {
-        document.title = `${getNewsSource(props.source)} News - Daily News`;
+        document.title = `${getNewsSource(props.source)} News - News Padho`;
         setloading(true);
         let url = `https://saurav.tech/NewsAPI/everything/${props.source}.json`;
         const response = await fetch(url);
