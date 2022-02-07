@@ -20,7 +20,10 @@ function Sources(props) {
 
     const sourcecard = [];
     for (let i = 0; i < sources.length; i++) {
-        sourcecard.push(<SourceCard key={i} source={sources[i]} />);
+        if(sources[i].url)
+        {
+            sourcecard.push(<SourceCard key={i} source={sources[i]} />);
+        }
     }
     return (
         <div style={{ marginTop: '80px' }}>
@@ -36,5 +39,5 @@ function Sources(props) {
         </div>
     );
 }
-
+ 
 export default Sources;

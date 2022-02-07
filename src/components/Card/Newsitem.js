@@ -1,5 +1,4 @@
 import React from 'react';
-import '../style.css';
 function Newsitem(props) {
     const removeSpace = (text) => {
         let newText = text.split(/[ ]+/);
@@ -54,9 +53,5 @@ function Newsitem(props) {
         </div>
     );
 }
-
-Newsitem.defultprops = {
-    title: 'Hii this is funny Title',
-};
 
 export default Newsitem;

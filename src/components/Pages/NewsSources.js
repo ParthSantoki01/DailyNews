@@ -44,6 +44,7 @@ function NewsSources(props) {
             }
         }
     };
+
     return (
         <div style={{ marginTop: '80px' }}>
             {loading && <Spinner />}

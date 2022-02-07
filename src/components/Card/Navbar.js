@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../style.css';
-
 function Navbar() {
     return (
         <nav className='navbar navbar-expand-lg navbar-dark bg-dark fixed-top'>
@@ -11,118 +9,105 @@ function Navbar() {
                 </Link>
 
                 <button
-                    className='btn btn-dark'
+                    className='navbar-toggler'
                     type='button'
-                    data-bs-toggle='offcanvas'
-                    data-bs-target='#offcanvasWithBothOptions'
-                    aria-controls='offcanvasWithBothOptions'
+                    data-bs-toggle='collapse'
+                    data-bs-target='#navbarSupportedContent'
+                    aria-controls='navbarSupportedContent'
+                    aria-expanded='false'
+                    aria-label='Toggle navigation'
                 >
                     <span className='navbar-toggler-icon'></span>
                 </button>
-
                 <div
-                    className='offcanvas offcanvas-top'
-                    data-bs-scroll='true'
-                    tabIndex='-1'
-                    id='offcanvasWithBothOptions'
-                    aria-labelledby='offcanvasWithBothOptionsLabel'
-                    style={{
-                        width: '100%',
-                        bgColor: 'black',
-                        textAlign: 'center',
-                    }}
+                    className='collapse navbar-collapse'
+                    id='navbarSupportedContent'
                 >
-                    <ul
-                        className='list-group list-group-flush'
-                        // style={{
-                        //     height: '100vh',
-                        //     backgroundColor: 'black',
-                        // }}
-                    >
-                        <li className='list-group-item listitem'>
+                    <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+                        <li className='nav-item'>
                             <Link
-                                className='nav-link itemlink'
+                                className='nav-link'
                                 aria-current='page'
                                 to='/business'
                             >
                                 Business
                             </Link>
                         </li>
-                        <li className='list-group-item listitem '>
+                        <li className='nav-item'>
                             <Link
-                                className='nav-link itemlink'
+                                className='nav-link'
                                 aria-current='page'
                                 to='/entertainment'
                             >
                                 Entertainment
                             </Link>
                         </li>
-                        <li className='list-group-item listitem '>
+                        <li className='nav-item'>
                             <Link
-                                className='nav-link itemlink'
+                                className='nav-link'
                                 aria-current='page'
                                 to='/general'
                             >
                                 General
                             </Link>
                         </li>
-                        <li className='list-group-item listitem '>
+                        <li className='nav-item'>
                             <Link
-                                className='nav-link itemlink'
+                                className='nav-link'
                                 aria-current='page'
                                 to='/health'
                             >
                                 Health
                             </Link>
                         </li>
-                        <li className='list-group-item listitem '>
+                        <li className='nav-item'>
                             <Link
-                                className='nav-link itemlink'
+                                className='nav-link'
                                 aria-current='page'
                                 to='/science'
                             >
                                 Science
                             </Link>
                         </li>
-                        <li className='list-group-item listitem '>
+                        <li className='nav-item'>
                             <Link
-                                className='nav-link itemlink'
+                                className='nav-link'
                                 aria-current='page'
                                 to='/sports'
                             >
                                 Sports
                             </Link>
                         </li>
-                        <li className='list-group-item listitem '>
+                        <li className='nav-item'>
                             <Link
-                                className='nav-link itemlink'
+                                className='nav-link'
                                 aria-current='page'
                                 to='/technology'
                             >
                                 Technology
                             </Link>
                         </li>
-                        <li className='list-group-item listitem '>
+                        <li className='nav-item'>
                             <Link
-                                className='nav-link itemlink'
+                                className='nav-link'
                                 aria-current='page'
                                 to='/country'
                             >
                                 Country
                             </Link>
                         </li>
-                        <li className='list-group-item listitem '>
+                        <li className='nav-item'>
                             <Link
-                                className='nav-link itemlink'
+                                className='nav-link'
                                 aria-current='page'
                                 to='/sources'
                             >
                                 Sources
                             </Link>
                         </li>
-                        <li className='list-group-item listitem  dropdown'>
+                        <li className='nav-item dropdown'>
                             <Link
-                                className='nav-link itemlink dropdown-toggle'
+                                className='nav-link dropdown-toggle'
                                 to='/'
                                 id='navbarDropdown'
                                 role='button'
@@ -175,5 +160,4 @@ function Navbar() {
         </nav>
     );
 }
-
 export default Navbar;
